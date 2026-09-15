@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <meta name="description" content="Baixe o Órbita para PC. Um lugar para conversar, jogar e compartilhar a tela com a sua turma.">
+  <title>Órbita — A sua turma. No mesmo espaço.</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23c4fb78'/%3E%3Ccircle cx='19' cy='22' r='10' fill='none' stroke='%23101715' stroke-width='5'/%3E%3Ccircle cx='29' cy='10' r='4' fill='%23101715'/%3E%3C/svg%3E">
+  <style>
+    :root{color-scheme:dark;--bg:#101715;--ink:#f1f4ef;--muted:#a8b5ad;--green:#c4fb78;--line:rgba(219,240,223,.13)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 92% 36%,rgba(80,115,67,.085),transparent 65%)}
+    a{color:inherit}header{height:113px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5.85%;position:relative}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-size:19px;font-weight:600;letter-spacing:5px}.mark{display:block;width:40px;height:40px;border-radius:12px;background:var(--green);position:relative}.mark:before{content:"";position:absolute;width:17px;height:17px;border:5px solid var(--bg);border-radius:50%;left:7px;top:9px}.mark:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;right:6px;top:6px;background:var(--bg)}.header-note{display:flex;gap:26px;align-items:center;font-size:12px;letter-spacing:2px;color:var(--muted)}.edition{border:1px solid #3a4839;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;letter-spacing:0;font-size:12px}
+    main{max-width:976px;margin:auto;padding:56px 0 72px;position:relative}.eyebrow{margin:0 0 24px;color:var(--green);font-size:12px;font-weight:600;letter-spacing:3px;line-height:1.7}h1{font-size:60px;line-height:1.03;letter-spacing:-3px;font-weight:600;margin:0 0 25px}h1 em{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--green);letter-spacing:-3.8px}.intro{font-size:16px;color:#b3c0b7;line-height:1.8;margin:0;max-width:490px}.download-area{margin-top:37px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}.download{border:0;border-radius:7px;background:var(--green);color:#142013;display:inline-flex;align-items:center;gap:13px;padding:19px 24px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}.download:hover{background:#d3ff9a;transform:translateY(-2px)}.download:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid white;outline-offset:5px}.download svg{width:20px;height:20px}.download .arrow{margin-left:23px}.download-note{color:var(--muted);font-size:13px;margin:0;line-height:1.5}.details{margin-top:76px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding-top:27px;gap:30px}.detail{display:flex;align-items:center;gap:13px;font-size:14px;color:#bac5bd}.detail svg{height:20px;width:20px;color:var(--green);flex-shrink:0}footer{position:relative;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:25px 5.85%;color:#8f9f93;font-size:12px;letter-spacing:.4px}.footer-line{display:flex;gap:9px;align-items:center}.small-orbit{width:13px;height:13px;border:1px solid var(--green);border-radius:50%;display:inline-block}
+    dialog{border:1px solid #43523c;border-radius:14px;background:#172019;color:var(--ink);max-width:420px;width:calc(100% - 40px);padding:30px;box-shadow:0 25px 90px #0008}dialog::backdrop{background:#050906bb;backdrop-filter:blur(5px)}dialog h2{font-size:24px;margin:0 0 13px;letter-spacing:-.6px}dialog p{color:#b3c0b7;font-size:16px;line-height:1.7}dialog button{border:1px solid #526440;background:transparent;color:var(--green);border-radius:6px;padding:11px 20px;font:inherit;cursor:pointer}
+    @media(min-width:1600px){main{max-width:1120px;padding-top:75px;padding-bottom:90px}h1{font-size:72px}.details{margin-top:100px}}
+    @media(max-width:1120px){main{margin:0 10%;}}@media(max-width:640px){header{height:90px;padding:0 7%}.header-note>span:first-child{display:none}.brand{font-size:16px;letter-spacing:4px}.mark{width:36px;height:36px}.mark:before{left:5px;top:7px}main{margin:0;padding:48px 7% 45px}.eyebrow{font-size:11px;letter-spacing:2.4px}h1{font-size:clamp(39px,9vw,56px);letter-spacing:-2px;line-height:1.08}h1 em{letter-spacing:-2.5px}.intro{max-width:340px}.download-area{margin-top:30px}.download{padding:18px 21px}.details{grid-template-columns:1fr;gap:24px;margin-top:50px;padding-top:28px}footer{padding:23px 7%;gap:18px;flex-wrap:wrap}.header-note{gap:0}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./" aria-label="Órbita, página inicial"><span class="mark" aria-hidden="true"></span>ÓRBITA</a>
+    <div class="header-note"><span>FEITO PARA ESTAR JUNTO</span><span class="edition">01</span></div>
+  </header>
+  <main>
+    <p class="eyebrow">LONGE É SÓ UMA DISTÂNCIA.</p>
+    <h1>A sua turma.<br>No mesmo <em>espaço.</em></h1>
+    <p class="intro">Um lugar para conversar, jogar e compartilhar a tela.<br>Sem complicação. Do seu jeito.</p>
+    <div class="download-area">
+      <a class="download" id="download" href="https://github.com/pageblog/orbita/releases/latest">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4.4 10.3 3v8H2zm9.4-1.6L22 1v10H11.4zM2 12.2h8.3v8L2 18.8zm9.4 0H22v10l-10.6-1.8z"/></svg>
+        Baixar para Windows
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+      </a>
+      <p class="download-note" id="download-note" role="status" aria-live="polite">Windows · Consulte a versão mais recente no GitHub.</p>
+    </div>
+    <div class="details" aria-label="No seu espaço">
+      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8m-8 4h5"/></svg>Conversa que aproxima.</div>
+      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M8 6h8c3 0 4 3 5 10 .5 4-3 4-5 0H8c-2 4-5.5 4-5 0 1-7 2-10 5-10Z"/><path d="M7 9v5m-2.5-2.5h5M16 10h.1M18 13h.1"/></svg>Uma partida em boa companhia.</div>
+      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4m-3-9 3-3 3 3m-3-3v6"/></svg>Sua tela, compartilhada.</div>
+    </div>
+  </main>
+  <footer><span>© <span id="year">2026</span> Órbita</span><span class="footer-line"><i class="small-orbit" aria-hidden="true"></i> Perto, de qualquer lugar.</span></footer>
+  <script>
+    const REPOSITORY = 'pageblog/orbita';
+    const RELEASES_URL = 'https://github.com/' + REPOSITORY + '/releases/latest';
+    const download = document.getElementById('download');
+    const note = document.getElementById('download-note');
+    let pending = null;
+    let navigating = false;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function refreshRelease() {
+      if (pending) return pending;
+      pending = (async function() {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 10000);
+        download.setAttribute('aria-busy', 'true');
+        note.textContent = 'Consultando a versão mais recente…';
+        try {
+          const response = await fetch('https://api.github.com/repos/' + REPOSITORY + '/releases/latest', {
+            headers: { Accept: 'application/vnd.github+json' },
+            cache: 'no-store', signal: controller.signal
+          });
+          if (!response.ok) throw new Error('Release indisponível');
+          const release = await response.json();
+          if (release.draft || release.prerelease) throw new Error('Release não estável');
+          // Aceita apenas o instalador, nunca .blockmap, .yml ou código-fonte.
+          const assets = (release.assets || []).filter(asset =>
+            asset.state === 'uploaded' && /^Orbita[. -]Setup[. -].+\.exe$/i.test(asset.name)
+          );
+          if (assets.length !== 1) throw new Error('Instalador ausente ou ambíguo');
+          const asset = assets[0];
+          const url = new URL(asset.browser_download_url);
+          if (url.origin !== 'https://github.com' || !url.pathname.startsWith('/' + REPOSITORY + '/releases/download/')) {
+            throw new Error('Endereço de download inválido');
+          }
+          const version = String(release.tag_name || release.name || '').replace(/^v(?=\d)/, '');
+          const size = Number(asset.size);
+          const sizeText = Number.isFinite(size) && size > 0
+            ? ' · ' + (size / 1000000).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB' : '';
+          note.textContent = (version ? 'Versão ' + version + ' · ' : '') + 'Windows' + sizeText;
+          download.href = url.href;
+          return url.href;
+        } catch (error) {
+          download.href = RELEASES_URL;
+          note.textContent = 'Não foi possível consultar a versão. O botão abre os Releases no GitHub.';
+          return RELEASES_URL;
+        } finally {
+          clearTimeout(timeout);
+          download.removeAttribute('aria-busy');
+        }
+      })().finally(() => { pending = null; });
+      return pending;
+    }
+    download.addEventListener('click', async function(event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      if (navigating) return;
+      navigating = true;
+      try { window.location.assign(await refreshRelease()); }
+      finally { navigating = false; }
+    });
+    refreshRelease();
+  </script>
+</body>
+</html>
