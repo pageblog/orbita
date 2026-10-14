@@ -1,108 +1,608 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#101715">
-  <meta name="description" content="Baixe o Órbita para PC. Um lugar para conversar, jogar e compartilhar a tela com a sua turma.">
-  <title>Órbita — A sua turma. No mesmo espaço.</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23c4fb78'/%3E%3Ccircle cx='19' cy='22' r='10' fill='none' stroke='%23101715' stroke-width='5'/%3E%3Ccircle cx='29' cy='10' r='4' fill='%23101715'/%3E%3C/svg%3E">
-  <style>
-    :root{color-scheme:dark;--bg:#101715;--ink:#f1f4ef;--muted:#a8b5ad;--green:#c4fb78;--line:rgba(219,240,223,.13)}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 92% 36%,rgba(80,115,67,.085),transparent 65%)}
-    a{color:inherit}header{height:113px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5.85%;position:relative}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-size:19px;font-weight:600;letter-spacing:5px}.mark{display:block;width:40px;height:40px;border-radius:12px;background:var(--green);position:relative}.mark:before{content:"";position:absolute;width:17px;height:17px;border:5px solid var(--bg);border-radius:50%;left:7px;top:9px}.mark:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;right:6px;top:6px;background:var(--bg)}.header-note{display:flex;gap:26px;align-items:center;font-size:12px;letter-spacing:2px;color:var(--muted)}.edition{border:1px solid #3a4839;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;letter-spacing:0;font-size:12px}
-    main{max-width:976px;margin:auto;padding:56px 0 72px;position:relative}.eyebrow{margin:0 0 24px;color:var(--green);font-size:12px;font-weight:600;letter-spacing:3px;line-height:1.7}h1{font-size:60px;line-height:1.03;letter-spacing:-3px;font-weight:600;margin:0 0 25px}h1 em{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--green);letter-spacing:-3.8px}.intro{font-size:16px;color:#b3c0b7;line-height:1.8;margin:0;max-width:490px}.download-area{margin-top:37px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}.download{border:0;border-radius:7px;background:var(--green);color:#142013;display:inline-flex;align-items:center;gap:13px;padding:19px 24px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}.download:hover{background:#d3ff9a;transform:translateY(-2px)}.download:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid white;outline-offset:5px}.download svg{width:20px;height:20px}.download .arrow{margin-left:23px}.download-note{color:var(--muted);font-size:13px;margin:0;line-height:1.5}.details{margin-top:76px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding-top:27px;gap:30px}.detail{display:flex;align-items:center;gap:13px;font-size:14px;color:#bac5bd}.detail svg{height:20px;width:20px;color:var(--green);flex-shrink:0}footer{position:relative;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:25px 5.85%;color:#8f9f93;font-size:12px;letter-spacing:.4px}.footer-line{display:flex;gap:9px;align-items:center}.small-orbit{width:13px;height:13px;border:1px solid var(--green);border-radius:50%;display:inline-block}
-    dialog{border:1px solid #43523c;border-radius:14px;background:#172019;color:var(--ink);max-width:420px;width:calc(100% - 40px);padding:30px;box-shadow:0 25px 90px #0008}dialog::backdrop{background:#050906bb;backdrop-filter:blur(5px)}dialog h2{font-size:24px;margin:0 0 13px;letter-spacing:-.6px}dialog p{color:#b3c0b7;font-size:16px;line-height:1.7}dialog button{border:1px solid #526440;background:transparent;color:var(--green);border-radius:6px;padding:11px 20px;font:inherit;cursor:pointer}
-    @media(min-width:1600px){main{max-width:1120px;padding-top:75px;padding-bottom:90px}h1{font-size:72px}.details{margin-top:100px}}
-    @media(max-width:1120px){main{margin:0 10%;}}@media(max-width:640px){header{height:90px;padding:0 7%}.header-note>span:first-child{display:none}.brand{font-size:16px;letter-spacing:4px}.mark{width:36px;height:36px}.mark:before{left:5px;top:7px}main{margin:0;padding:48px 7% 45px}.eyebrow{font-size:11px;letter-spacing:2.4px}h1{font-size:clamp(39px,9vw,56px);letter-spacing:-2px;line-height:1.08}h1 em{letter-spacing:-2.5px}.intro{max-width:340px}.download-area{margin-top:30px}.download{padding:18px 21px}.details{grid-template-columns:1fr;gap:24px;margin-top:50px;padding-top:28px}footer{padding:23px 7%;gap:18px;flex-wrap:wrap}.header-note{gap:0}}
-    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101715">
+<meta name="description" content="Baixe o Órbita para PC. Um lugar para conversar, jogar e compartilhar a tela com a sua turma.">
+<title>Órbita — A sua turma. No mesmo espaço.</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23c4fb78'/%3E%3Ccircle cx='19' cy='22' r='10' fill='none' stroke='%23101715' stroke-width='5'/%3E%3Ccircle cx='29' cy='10' r='4' fill='%23101715'/%3E%3C/svg%3E">
+<style>
+  :root { --bg:#050706; --accent:#c4fb78; --accent2:#5ee6c4; --ink:#070a09; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { height:100%; background:var(--bg); color:#fff; overflow:hidden;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+
+  /* Tela inicial (o navegador só libera som depois de um clique) */
+  #start { position:fixed; inset:0; z-index:20; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; gap:20px; background:var(--bg); }
+  #start h2 { font-size:20px; letter-spacing:.4em; font-weight:700; }
+  #start button { background:var(--accent); color:var(--ink); border:0; cursor:pointer; font-weight:800;
+    font-size:18px; padding:18px 34px; border-radius:999px; animation:startPulse 1.6s ease-in-out infinite; }
+  #start small { color:#9aa8a0; font-size:13px; }
+  @keyframes startPulse { 0%,100%{ box-shadow:0 0 0 0 rgba(196,251,120,.55); } 50%{ box-shadow:0 0 0 20px rgba(196,251,120,0); } }
+
+  #stage { position:fixed; inset:0; display:none; overflow:hidden; background:var(--bg); }
+  #stage.on { display:block; }
+  #shake { position:absolute; inset:0; }
+  .shake-it { animation:shake .35s linear; }
+  @keyframes shake {
+    0%{transform:translate(0,0)} 15%{transform:translate(-12px,7px)} 30%{transform:translate(10px,-8px)}
+    45%{transform:translate(-8px,-5px)} 60%{transform:translate(7px,6px)} 80%{transform:translate(-3px,2px)} 100%{transform:translate(0,0)}
+  }
+
+  .scene { position:absolute; inset:0; display:none; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center; overflow:hidden; }
+  .scene.on { display:flex; }
+
+  /* ---------- Cena A: "LONGE?" ---------- */
+  #sA { background:#050706; }
+  #sA .big { font-size:clamp(70px,20vw,230px); font-weight:900; letter-spacing:-.045em; line-height:1; text-transform:uppercase; }
+  #sA .big span { display:inline-block; opacity:0; }
+  #sA.on .w1 { animation:slam .42s cubic-bezier(.2,1.2,.3,1) both, glitch .4s steps(2) .42s 2; }
+  #sA.on .q  { color:var(--accent); animation:slam .42s cubic-bezier(.2,1.2,.3,1) .6s both, glitch .4s steps(2) 1.02s 2; }
+  @keyframes slam {
+    0%   { opacity:0; transform:scale(3.2); filter:blur(22px); }
+    60%  { opacity:1; transform:scale(.93); filter:blur(0); }
+    100% { opacity:1; transform:scale(1); filter:blur(0); }
+  }
+  @keyframes glitch {
+    0%   { text-shadow:7px 0 #ff2e63,-7px 0 #08f7fe; }
+    50%  { text-shadow:-9px 2px #ff2e63,9px -2px #08f7fe; }
+    100% { text-shadow:none; }
+  }
+
+  /* ---------- Cena B: "1 CLIQUE." ---------- */
+  #sB { background:var(--accent); color:var(--ink); }
+  #sB .big2 { font-size:clamp(56px,14vw,170px); font-weight:900; letter-spacing:-.04em; line-height:1; text-transform:uppercase; opacity:0; }
+  #sB.on .big2 { animation:slam .42s cubic-bezier(.2,1.2,.3,1) both; }
+  #sB .one { display:inline-block; background:var(--ink); color:var(--accent); border-radius:.22em; padding:0 .18em; margin-right:.1em; }
+  #sB .btn { position:relative; margin-top:30px; background:var(--ink); color:var(--accent); font-weight:800;
+    font-size:clamp(16px,3vw,24px); padding:.9em 1.7em; border-radius:999px; opacity:0; }
+  #sB.on .btn { animation:rise .4s ease-out .5s both, press .25s ease-out 1.05s both; }
+  @keyframes rise { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:none; } }
+  @keyframes press { 0%{transform:scale(1)} 40%{transform:scale(.88)} 100%{transform:scale(1)} }
+
+  #sB .cursor { position:absolute; left:55%; top:55%; width:38px; height:38px; opacity:0; z-index:2; pointer-events:none; }
+  #sB.on .cursor { animation:cursorMove .45s cubic-bezier(.3,0,.2,1) .6s both; }
+  #sB .cursor svg { width:100%; height:100%; }
+  #sB.on .cursor svg { animation:cclick .2s ease-out 1.05s both; transform-origin:4px 4px; }
+  @keyframes cursorMove { from{ opacity:0; transform:translate(300px,240px); } to{ opacity:1; transform:translate(0,0); } }
+  @keyframes cclick { 50%{ transform:scale(.7); } 100%{ transform:scale(1); } }
+
+  #sB .ripple { position:absolute; left:55%; top:55%; width:20px; height:20px; border-radius:50%;
+    border:5px solid var(--ink); opacity:0; }
+  #sB.on .ripple { animation:ripple .7s ease-out 1.05s both; }
+  @keyframes ripple {
+    0%   { opacity:1; transform:translate(-50%,-50%) scale(0); }
+    100% { opacity:0; transform:translate(-50%,-50%) scale(14); }
+  }
+
+  #sB .bub { position:absolute; width:clamp(54px,9vw,96px); aspect-ratio:1; border-radius:50%; background:var(--ink);
+    color:var(--accent); border:4px solid #fff; display:grid; place-items:center; font-weight:900;
+    font-size:clamp(22px,4vw,40px); opacity:0; }
+  #sB.on .bub { animation:bubPop .55s cubic-bezier(.3,1.9,.5,1) calc(1.05s + var(--i) * .1s) both; }
+  @keyframes bubPop { from{ opacity:0; transform:scale(0) rotate(-90deg); } to{ opacity:1; transform:scale(1) rotate(0); } }
+
+  /* ---------- Cena C: CÂMERA / TELA / CHAT ---------- */
+  #sC { background:radial-gradient(ellipse at 50% 50%, #17301f 0%, var(--bg) 70%); }
+  .cw { position:absolute; inset:0; display:none; flex-direction:column; align-items:center; justify-content:center; }
+  .cw.show { display:flex; }
+  .cw .grp { display:flex; flex-direction:column; align-items:center; }
+  .cw .icowrap { position:relative; }
+  .cw .ico { width:clamp(80px,16vw,160px); height:auto; fill:none; stroke:var(--accent); stroke-width:2.4;
+    stroke-linecap:round; stroke-linejoin:round; margin-bottom:8px; }
+  .cw .word { font-size:clamp(56px,16vw,190px); font-weight:900; letter-spacing:-.045em; line-height:1; text-transform:uppercase; }
+  .cw .bar { height:12px; width:0; background:var(--accent); margin-top:16px; border-radius:99px; }
+  .cw.show .bar { animation:bar .4s ease-out .15s both; }
+  @keyframes bar { to{ width:62%; } }
+  .cw.l.show .grp { animation:inL .32s cubic-bezier(.2,1.3,.3,1) both; }
+  .cw.r.show .grp { animation:inR .32s cubic-bezier(.2,1.3,.3,1) both; }
+  .cw.b.show .grp { animation:inB .32s cubic-bezier(.2,1.3,.3,1) both; }
+  @keyframes inL { from{ transform:translateX(-120%); } to{ transform:none; } }
+  @keyframes inR { from{ transform:translateX(120%); } to{ transform:none; } }
+  @keyframes inB { from{ transform:translateY(120%); } to{ transform:none; } }
+  .rec { position:absolute; top:4px; right:-14px; width:18px; height:18px; border-radius:50%; background:#ff3b4e;
+    animation:blink .5s steps(2,start) infinite; box-shadow:0 0 14px #ff3b4e; }
+  @keyframes blink { to{ visibility:hidden; } }
+
+  /* ---------- Cena D: logo + chamada para ação ---------- */
+  #sD { background:radial-gradient(ellipse at 50% 40%, #1d3a26 0%, var(--bg) 70%); }
+  .logo-wrap { position:relative; width:130px; height:130px; margin-bottom:34px; }
+  #sD.on .logo-wrap { animation:logoBoom .7s cubic-bezier(.2,1.5,.4,1) both; }
+  @keyframes logoBoom { from{ opacity:0; transform:scale(0) rotate(-200deg); } to{ opacity:1; transform:scale(1) rotate(0); } }
+  .ring { position:absolute; inset:0; border-radius:50%; border:2px dashed rgba(196,251,120,.55); animation:spin 6s linear infinite; }
+  .ring.r2 { inset:-18px; border:2px solid rgba(94,230,196,.4); animation:spin 9s linear infinite reverse; }
+  .ring.r3 { inset:-36px; border:1px dotted rgba(196,251,120,.35); animation:spin 14s linear infinite; }
+  .orb { position:absolute; width:12px; height:12px; border-radius:50%; background:var(--accent2);
+    box-shadow:0 0 14px var(--accent2); top:-6px; left:50%; margin-left:-6px; }
+  .core { position:absolute; inset:24px; border-radius:28px; background:var(--accent); display:grid; place-items:center;
+    box-shadow:0 0 70px rgba(196,251,120,.65); }
+  .core span { width:26px; height:26px; border-radius:50%; border:6px solid var(--ink); display:block; }
+  @keyframes spin { to{ transform:rotate(360deg); } }
+
+  .name { font-size:clamp(44px,11vw,120px); font-weight:900; letter-spacing:.14em; display:flex; margin-right:-.14em; }
+  #sD.on .name span { display:inline-block; animation:letterIn .35s cubic-bezier(.2,1.7,.4,1) calc(.2s + var(--i) * .06s) both; }
+  @keyframes letterIn { from{ opacity:0; transform:translateY(70px) scale(.5) rotate(14deg); } to{ opacity:1; transform:none; } }
+  .tag { margin-top:18px; font-size:clamp(16px,2.8vw,26px); color:#c9d4cd; opacity:0; }
+  #sD.on .tag { animation:rise .5s ease-out .9s both; }
+  .tag b { color:var(--accent); }
+  .cta { margin-top:30px; display:inline-flex; align-items:center; gap:12px; cursor:pointer; background:var(--accent); color:var(--ink); font-weight:800;
+    font-size:clamp(17px,3vw,24px); padding:.95em 1.9em; border-radius:999px; text-decoration:none; opacity:0; }
+  #sD.on .cta { animation:ctaIn .5s cubic-bezier(.3,1.8,.5,1) 1.4s both, ctaPulse 1.1s ease-in-out 1.95s infinite; }
+  @keyframes ctaIn { from{ opacity:0; transform:scale(.3); } to{ opacity:1; transform:scale(1); } }
+  @keyframes ctaPulse { 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.07); } }
+
+  .cta svg { width:22px; height:22px; flex-shrink:0; }
+  .dl-note { margin-top:14px; color:#a8b5ad; font-size:clamp(12px,2vw,14px); opacity:0; }
+  #sD.on .dl-note { animation:rise .5s ease-out 1.9s both; }
+
+  .credit { position:absolute; left:0; right:0; bottom:clamp(16px,4vh,32px); text-align:center; opacity:0;
+    font-size:clamp(11px,1.8vw,14px); letter-spacing:.24em; text-transform:uppercase; color:#8f9f93; pointer-events:none; }
+  .credit b { color:var(--accent); font-weight:700; }
+  #sD.on .credit { animation:rise .6s ease-out 2.6s both; }
+
+  .conf { position:absolute; left:50%; top:62%; width:10px; height:16px; border-radius:2px; opacity:0; }
+  #sD.on .conf { animation:burst 1.3s cubic-bezier(.1,.7,.3,1) 1.4s both; }
+  @keyframes burst {
+    0%   { opacity:1; transform:translate(0,0) rotate(0); }
+    100% { opacity:0; transform:translate(var(--x),var(--y)) rotate(var(--r)); }
+  }
+
+  /* ---------- Transições ---------- */
+  .wipe { position:absolute; top:0; bottom:0; left:-30%; width:160%; z-index:6; pointer-events:none;
+    background:linear-gradient(90deg, var(--accent) 0%, #eaffb8 85%, #fff 100%); transform:translateX(-120%) skewX(-14deg); }
+  .wipe.go  { animation:wipeLR .6s cubic-bezier(.7,0,.3,1) forwards; }
+  .wipe.go2 { background:linear-gradient(270deg, var(--accent) 0%, #eaffb8 85%, #fff 100%); animation:wipeRL .6s cubic-bezier(.7,0,.3,1) forwards; }
+  @keyframes wipeLR { from{ transform:translateX(-120%) skewX(-14deg); } to{ transform:translateX(120%) skewX(-14deg); } }
+  @keyframes wipeRL { from{ transform:translateX(120%) skewX(-14deg); } to{ transform:translateX(-120%) skewX(-14deg); } }
+
+  #flash { position:absolute; inset:0; z-index:7; background:#fff; opacity:0; pointer-events:none; }
+  #flash.go { animation:flash .16s ease-out; }
+  @keyframes flash { 0%{ opacity:.85; } 100%{ opacity:0; } }
+
+</style>
 </head>
 <body>
-  <header>
-    <a class="brand" href="./" aria-label="Órbita, página inicial"><span class="mark" aria-hidden="true"></span>ÓRBITA</a>
-    <div class="header-note"><span>FEITO PARA ESTAR JUNTO</span><span class="edition">01</span></div>
-  </header>
-  <main>
-    <p class="eyebrow">LONGE É SÓ UMA DISTÂNCIA.</p>
-    <h1>A sua turma.<br>No mesmo <em>espaço.</em></h1>
-    <p class="intro">Um lugar para conversar, jogar e compartilhar a tela.<br>Sem complicação. Do seu jeito.</p>
-    <div class="download-area">
-      <a class="download" id="download" href="https://github.com/pageblog/orbita/releases/latest">
+
+<div id="start">
+  <h2>ÓRBITA</h2>
+  <button id="go">Explorar um novo ambiente →</button>
+  <small>Use fone para sentir os efeitos de um lado ao outro</small>
+</div>
+
+<main id="stage">
+
+  <div id="shake">
+
+    <!-- A -->
+    <section class="scene" id="sA">
+      <div class="big"><span class="w1">Longe</span><span class="q">?</span></div>
+    </section>
+
+    <!-- B -->
+    <section class="scene" id="sB">
+      <div class="big2"><span class="one">1</span>clique.</div>
+      <div class="btn">
+        Entrar na chamada →
+        <div class="ripple"></div>
+        <div class="cursor">
+          <svg viewBox="0 0 24 24"><path d="M4 3l15 8-6.5 1.8L9.5 19z" fill="#fff" stroke="#070a09" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="bub" style="left:9%;top:16%;--i:0">A</div>
+      <div class="bub" style="right:9%;top:14%;--i:1">B</div>
+      <div class="bub" style="left:5%;top:62%;--i:2">C</div>
+      <div class="bub" style="right:6%;top:64%;--i:3">D</div>
+      <div class="bub" style="left:24%;bottom:7%;--i:4">E</div>
+      <div class="bub" style="right:24%;bottom:6%;--i:5">F</div>
+    </section>
+
+    <!-- C -->
+    <section class="scene" id="sC">
+      <div class="cw l">
+        <div class="grp">
+          <div class="icowrap">
+            <svg class="ico" viewBox="0 0 64 64"><rect x="6" y="18" width="38" height="28" rx="6"/><path d="M44 28l14-8v24l-14-8z"/></svg>
+            <span class="rec"></span>
+          </div>
+          <div class="word">Câmera</div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="cw r">
+        <div class="grp">
+          <div class="icowrap">
+            <svg class="ico" viewBox="0 0 64 64"><rect x="6" y="10" width="52" height="34" rx="4"/><path d="M22 54h20M32 44v10M32 37V22M26 28l6-6 6 6"/></svg>
+          </div>
+          <div class="word">Tela</div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="cw b">
+        <div class="grp">
+          <div class="icowrap">
+            <svg class="ico" viewBox="0 0 64 64"><path d="M10 12h44a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H30L18 54V44h-8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z"/><circle cx="20" cy="28" r="2.4" fill="#c4fb78"/><circle cx="32" cy="28" r="2.4" fill="#c4fb78"/><circle cx="44" cy="28" r="2.4" fill="#c4fb78"/></svg>
+          </div>
+          <div class="word">Chat</div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D -->
+    <section class="scene" id="sD">
+      <div class="logo-wrap">
+        <div class="ring"><div class="orb"></div></div>
+        <div class="ring r2"><div class="orb"></div></div>
+        <div class="ring r3"><div class="orb"></div></div>
+        <div class="core"><span></span></div>
+      </div>
+      <div class="name">
+        <span style="--i:0">Ó</span><span style="--i:1">R</span><span style="--i:2">B</span><span style="--i:3">I</span><span style="--i:4">T</span><span style="--i:5">A</span>
+      </div>
+      <p class="tag">A sua turma. No mesmo <b>espaço.</b></p>
+      <a class="cta" id="download" href="https://github.com/pageblog/orbita/releases/latest">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4.4 10.3 3v8H2zm9.4-1.6L22 1v10H11.4zM2 12.2h8.3v8L2 18.8zm9.4 0H22v10l-10.6-1.8z"/></svg>
         Baixar para Windows
-        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
       </a>
-      <p class="download-note" id="download-note" role="status" aria-live="polite">Windows · Consulte a versão mais recente no GitHub.</p>
-    </div>
-    <div class="details" aria-label="No seu espaço">
-      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z"/><path d="M7 10h8m-8 4h5"/></svg>Conversa que aproxima.</div>
-      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M8 6h8c3 0 4 3 5 10 .5 4-3 4-5 0H8c-2 4-5.5 4-5 0 1-7 2-10 5-10Z"/><path d="M7 9v5m-2.5-2.5h5M16 10h.1M18 13h.1"/></svg>Uma partida em boa companhia.</div>
-      <div class="detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4m-3-9 3-3 3 3m-3-3v6"/></svg>Sua tela, compartilhada.</div>
-    </div>
-  </main>
-  <footer><span>© <span id="year">2026</span> Órbita</span><span class="footer-line"><i class="small-orbit" aria-hidden="true"></i> Perto, de qualquer lugar.</span></footer>
-  <script>
-    const REPOSITORY = 'pageblog/orbita';
-    const RELEASES_URL = 'https://github.com/' + REPOSITORY + '/releases/latest';
-    const download = document.getElementById('download');
-    const note = document.getElementById('download-note');
-    let pending = null;
-    let navigating = false;
-    document.getElementById('year').textContent = new Date().getFullYear();
+      <p class="dl-note" id="download-note" role="status" aria-live="polite">Windows · Consulte a versão mais recente no GitHub.</p>
+      <p class="credit">Feito por <b>Evo</b></p>
+    </section>
 
-    function refreshRelease() {
-      if (pending) return pending;
-      pending = (async function() {
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 10000);
-        download.setAttribute('aria-busy', 'true');
-        note.textContent = 'Consultando a versão mais recente…';
-        try {
-          const response = await fetch('https://api.github.com/repos/' + REPOSITORY + '/releases/latest', {
-            headers: { Accept: 'application/vnd.github+json' },
-            cache: 'no-store', signal: controller.signal
-          });
-          if (!response.ok) throw new Error('Release indisponível');
-          const release = await response.json();
-          if (release.draft || release.prerelease) throw new Error('Release não estável');
-          // Aceita apenas o instalador, nunca .blockmap, .yml ou código-fonte.
-          const assets = (release.assets || []).filter(asset =>
-            asset.state === 'uploaded' && /^Orbita[. -]Setup[. -].+\.exe$/i.test(asset.name)
-          );
-          if (assets.length !== 1) throw new Error('Instalador ausente ou ambíguo');
-          const asset = assets[0];
-          const url = new URL(asset.browser_download_url);
-          if (url.origin !== 'https://github.com' || !url.pathname.startsWith('/' + REPOSITORY + '/releases/download/')) {
-            throw new Error('Endereço de download inválido');
-          }
-          const version = String(release.tag_name || release.name || '').replace(/^v(?=\d)/, '');
-          const size = Number(asset.size);
-          const sizeText = Number.isFinite(size) && size > 0
-            ? ' · ' + (size / 1000000).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB' : '';
-          note.textContent = (version ? 'Versão ' + version + ' · ' : '') + 'Windows' + sizeText;
-          download.href = url.href;
-          return url.href;
-        } catch (error) {
-          download.href = RELEASES_URL;
-          note.textContent = 'Não foi possível consultar a versão. O botão abre os Releases no GitHub.';
-          return RELEASES_URL;
-        } finally {
-          clearTimeout(timeout);
-          download.removeAttribute('aria-busy');
-        }
-      })().finally(() => { pending = null; });
-      return pending;
+  </div>
+
+  <div class="wipe" id="wipe"></div>
+  <div id="flash"></div>
+</main>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var scenes = ['sA','sB','sC','sD'].map($);
+  var cws = Array.prototype.slice.call(document.querySelectorAll('.cw'));
+  var shakeEl = $('shake'), wipeEl = $('wipe'), flashEl = $('flash');
+
+  /* Confete da cena final */
+  var colors = ['#c4fb78','#5ee6c4','#ffffff','#ffd166'];
+  for (var i = 0; i < 22; i++) {
+    var c = document.createElement('div');
+    c.className = 'conf';
+    var ang = Math.random() * Math.PI * 2, dist = 160 + Math.random() * 280;
+    c.style.setProperty('--x', Math.cos(ang) * dist + 'px');
+    c.style.setProperty('--y', (Math.sin(ang) * dist - 120) + 'px');
+    c.style.setProperty('--r', (Math.random() * 900 - 450) + 'deg');
+    c.style.background = colors[i % colors.length];
+    $('sD').appendChild(c);
+  }
+
+  /* ---------- Áudio (Web Audio, sem arquivos externos) ---------- */
+  var ctx, master, verb, noiseBuf;
+
+  function initAudio() {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    var comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -14; comp.ratio.value = 6;
+    master = ctx.createGain(); master.gain.value = 0.9;
+    master.connect(comp); comp.connect(ctx.destination);
+
+    noiseBuf = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
+    var d = noiseBuf.getChannelData(0);
+    for (var k = 0; k < d.length; k++) d[k] = Math.random() * 2 - 1;
+
+    var len = Math.floor(ctx.sampleRate * 1.6);
+    var ir = ctx.createBuffer(2, len, ctx.sampleRate);
+    for (var ch = 0; ch < 2; ch++) {
+      var data = ir.getChannelData(ch);
+      for (var n = 0; n < len; n++) data[n] = (Math.random() * 2 - 1) * Math.pow(1 - n / len, 3);
     }
-    download.addEventListener('click', async function(event) {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      if (navigating) return;
-      navigating = true;
-      try { window.location.assign(await refreshRelease()); }
-      finally { navigating = false; }
+    verb = ctx.createConvolver(); verb.buffer = ir;
+    var vg = ctx.createGain(); vg.gain.value = 0.4;
+    verb.connect(vg); vg.connect(master);
+  }
+
+  function send(node, wet) {
+    node.connect(master);
+    if (wet) { var s = ctx.createGain(); s.gain.value = wet; node.connect(s); s.connect(verb); }
+  }
+
+  function tone(t, f, dur, type, vol, slide, wet) {
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type || 'sine';
+    o.frequency.setValueAtTime(f, t);
+    if (slide) o.frequency.exponentialRampToValueAtTime(slide, t + dur);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol || 0.2, t + 0.008);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); send(g, wet || 0);
+    o.start(t); o.stop(t + dur + 0.03);
+  }
+
+  function nburst(t, dur, hpf, vol) {
+    var n = ctx.createBufferSource(); n.buffer = noiseBuf;
+    var hp = ctx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = hpf;
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    n.connect(hp); hp.connect(g); send(g, 0.1);
+    n.start(t); n.stop(t + dur + 0.02);
+  }
+
+  /* Whoosh que atravessa o estéreo: p0 e p1 vão de -1 (esquerda) a 1 (direita) */
+  function whoosh(t, dur, f0, f1, vol, p0, p1) {
+    var src = ctx.createBufferSource(); src.buffer = noiseBuf; src.loop = true;
+    var bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = 0.8;
+    bp.frequency.setValueAtTime(f0, t);
+    bp.frequency.exponentialRampToValueAtTime(f1, t + dur * 0.5);
+    bp.frequency.exponentialRampToValueAtTime(f0 * 1.3, t + dur);
+    var hp = ctx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 180;
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + dur * 0.5);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    src.connect(bp); bp.connect(hp); hp.connect(g);
+    var last = g;
+    if (ctx.createStereoPanner) {
+      var p = ctx.createStereoPanner();
+      p.pan.setValueAtTime(p0 || 0, t);
+      p.pan.linearRampToValueAtTime(p1 || 0, t + dur);
+      g.connect(p); last = p;
+    }
+    send(last, 0.25);
+    src.start(t); src.stop(t + dur + 0.05);
+  }
+
+  function impact(t, s) {
+    s = s || 1;
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine';
+    o.frequency.setValueAtTime(120, t);
+    o.frequency.exponentialRampToValueAtTime(32, t + 0.7);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(1.0 * s, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.8);
+    o.connect(g); send(g, 0.2); o.start(t); o.stop(t + 0.85);
+
+    var n = ctx.createBufferSource(); n.buffer = noiseBuf;
+    var lp = ctx.createBiquadFilter(); lp.type = 'lowpass';
+    lp.frequency.setValueAtTime(5000, t);
+    lp.frequency.exponentialRampToValueAtTime(120, t + 0.4);
+    var ng = ctx.createGain();
+    ng.gain.setValueAtTime(0.7 * s, t);
+    ng.gain.exponentialRampToValueAtTime(0.0001, t + 0.4);
+    n.connect(lp); lp.connect(ng); send(ng, 0.35);
+    n.start(t); n.stop(t + 0.45);
+  }
+
+  function riser(t, dur, vol) {
+    var n = ctx.createBufferSource(); n.buffer = noiseBuf; n.loop = true;
+    var bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = 2;
+    bp.frequency.setValueAtTime(300, t);
+    bp.frequency.exponentialRampToValueAtTime(7000, t + dur);
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + dur * 0.95);
+    g.gain.linearRampToValueAtTime(0.0001, t + dur + 0.02);
+    n.connect(bp); bp.connect(g); send(g, 0.2);
+    n.start(t); n.stop(t + dur + 0.05);
+
+    var o = ctx.createOscillator(); o.type = 'sawtooth';
+    o.frequency.setValueAtTime(90, t);
+    o.frequency.exponentialRampToValueAtTime(900, t + dur);
+    var lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1800;
+    var og = ctx.createGain();
+    og.gain.setValueAtTime(0.0001, t);
+    og.gain.exponentialRampToValueAtTime(vol * 0.35, t + dur * 0.95);
+    og.gain.linearRampToValueAtTime(0.0001, t + dur + 0.02);
+    o.connect(lp); lp.connect(og); send(og, 0.2);
+    o.start(t); o.stop(t + dur + 0.05);
+  }
+
+  function kick(t) { tone(t, 150, 0.26, 'sine', 0.95, 45); nburst(t, 0.02, 1500, 0.2); }
+  function tick(t, f) { tone(t, f, 0.04, 'square', 0.07, f * 0.6); }
+  function click(t) { tone(t, 1800, 0.05, 'square', 0.12, 500); nburst(t, 0.03, 3000, 0.2); }
+  function pop(t, f) { tone(t, f, 0.16, 'sine', 0.35, f * 2.2, 0.15); nburst(t, 0.02, 2500, 0.08); }
+  function glitch(t) { for (var g = 0; g < 6; g++) tone(t + g * 0.045, 200 + Math.random() * 1800, 0.035, 'square', 0.07); }
+
+  function stinger(t) {
+    [65.41, 130.81, 261.63, 329.63, 392, 587.33].forEach(function (f, i) {
+      var o = ctx.createOscillator(), lp = ctx.createBiquadFilter(), g = ctx.createGain();
+      o.type = i < 2 ? 'sine' : 'sawtooth'; o.frequency.value = f;
+      lp.type = 'lowpass';
+      lp.frequency.setValueAtTime(4000, t);
+      lp.frequency.exponentialRampToValueAtTime(500, t + 1.8);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(i < 2 ? 0.35 : 0.09, t + 0.015);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 2.2);
+      o.connect(lp); lp.connect(g); send(g, 0.4);
+      o.start(t); o.stop(t + 2.3);
     });
-    refreshRelease();
-  </script>
+  }
+  function shimmer(t) {
+    [1046.5, 1318.5, 1568, 2093, 2349.3].forEach(function (f, i) { tone(t + i * 0.07, f, 0.7, 'triangle', 0.09, 0, 0.6); });
+  }
+
+  /* ---------- Linha do tempo (cerca de 8,6 segundos) ---------- */
+  function showScene(id) {
+    scenes.forEach(function (s) { s.classList.remove('on'); });
+    $(id).classList.add('on');
+  }
+  function showCW(i) { cws.forEach(function (c, k) { c.classList.toggle('show', k === i); }); }
+  function shake() { shakeEl.classList.remove('shake-it'); void shakeEl.offsetWidth; shakeEl.classList.add('shake-it'); }
+  function flash() { flashEl.classList.remove('go'); void flashEl.offsetWidth; flashEl.classList.add('go'); }
+  function wipe(cls) { wipeEl.className = 'wipe'; void wipeEl.offsetWidth; wipeEl.classList.add(cls); }
+  function now() { return ctx.currentTime; }
+
+  var cues = [
+    [0.00, function () { riser(now(), 0.33, 0.35); }],
+    [0.35, function () { showScene('sA'); impact(now(), 0.8); shake(); }],
+    [0.95, function () { impact(now(), 1.0); glitch(now()); shake(); }],
+
+    [1.75, function () { wipe('go'); whoosh(now(), 0.6, 500, 4200, 0.6, -1, 1); }],
+    [2.05, function () { showScene('sB'); impact(now(), 0.9); shake(); }],
+    [2.65, function () { whoosh(now(), 0.4, 900, 3200, 0.22, 0.8, 0); }],
+    [3.10, function () {
+        click(now());
+        for (var b = 0; b < 6; b++) pop(now() + b * 0.1, 420 * Math.pow(1.13, b));
+    }],
+
+    [3.85, function () { whoosh(now(), 0.4, 600, 3800, 0.55, -1, 0); }],
+    [3.95, function () { showScene('sC'); showCW(0); flash(); kick(now()); tick(now() + 0.1, 2200); shake(); }],
+    [4.45, function () { whoosh(now(), 0.4, 600, 3800, 0.55, 1, 0); }],
+    [4.55, function () { showCW(1); flash(); kick(now()); tick(now() + 0.1, 2600); shake(); }],
+    [5.00, function () { riser(now(), 0.7, 0.4); }],
+    [5.10, function () { whoosh(now(), 0.4, 300, 4500, 0.5, 0, 0); }],
+    [5.15, function () { showCW(2); flash(); kick(now()); tick(now() + 0.1, 3000); shake(); }],
+
+    [5.65, function () { wipe('go2'); whoosh(now(), 0.6, 500, 4200, 0.65, 1, -1); }],
+    [6.05, function () {
+        showScene('sD'); impact(now(), 1.3); stinger(now()); flash(); shake();
+        for (var l = 0; l < 6; l++) tick(now() + 0.2 + l * 0.06, 1700 + l * 200);
+    }],
+    [7.40, function () { shimmer(now()); pop(now(), 700); shake(); }]
+  ];
+
+  var raf = null;
+  function run() {
+    if (raf) cancelAnimationFrame(raf);
+    scenes.forEach(function (s) { s.classList.remove('on'); });
+    cws.forEach(function (c) { c.classList.remove('show'); });
+    wipeEl.className = 'wipe';
+
+    var t0 = ctx.currentTime + 0.1, idx = 0;
+    function frame() {
+      var el = ctx.currentTime - t0;
+      while (idx < cues.length && cues[idx][0] <= el) { cues[idx][1](); idx++; }
+      if (idx < cues.length) raf = requestAnimationFrame(frame);
+    }
+    frame();
+  }
+
+  $('go').addEventListener('click', function () {
+    initAudio();
+    ctx.resume();
+    $('start').style.display = 'none';
+    $('stage').classList.add('on');
+    run();
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const REPOSITORY = 'pageblog/orbita';
+  const API_URL = 'https://api.github.com/repos/' + REPOSITORY + '/releases/latest';
+  const RELEASES_URL = 'https://github.com/' + REPOSITORY + '/releases/latest';
+  const download = document.getElementById('download');
+  const note = document.getElementById('download-note');
+  let pending = null;
+  let current = null;
+  let restoreTimer = null;
+
+  // Escolhe o instalador da versão mais recente (ignora .blockmap, .yml e código-fonte).
+  function pickAsset(assets) {
+    const list = (assets || []).filter(function (a) {
+      return a && a.state === 'uploaded' && /\.(exe|msi)$/i.test(a.name) && !/blockmap/i.test(a.name);
+    });
+    if (!list.length) return null;
+    function rank(a) {
+      if (/^Orbita[. -]Setup[. -].+\.exe$/i.test(a.name)) return 0;
+      if (/setup|install/i.test(a.name)) return 1;
+      if (/orbita/i.test(a.name)) return 2;
+      return 3;
+    }
+    list.sort(function (a, b) { return rank(a) - rank(b) || (b.size || 0) - (a.size || 0); });
+    return list[0];
+  }
+
+  function setNote(text, showLink) {
+    note.textContent = text;
+    if (showLink) {
+      note.appendChild(document.createTextNode(' '));
+      const link = document.createElement('a');
+      link.href = RELEASES_URL;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Ver no GitHub';
+      note.appendChild(link);
+    }
+  }
+
+  function refreshRelease() {
+    if (pending) return pending;
+    pending = (async function () {
+      const controller = new AbortController();
+      const timeout = setTimeout(function () { controller.abort(); }, 10000);
+      download.setAttribute('aria-busy', 'true');
+      setNote('Consultando a versão mais recente…');
+      try {
+        const response = await fetch(API_URL, {
+          headers: { Accept: 'application/vnd.github+json' },
+          cache: 'no-store', signal: controller.signal
+        });
+        if (!response.ok) throw new Error('Release indisponível');
+        const release = await response.json();
+        const asset = pickAsset(release.assets);
+        if (!asset) throw new Error('Instalador não encontrado');
+        const url = new URL(asset.browser_download_url);
+        if (url.origin !== 'https://github.com' || !url.pathname.startsWith('/' + REPOSITORY + '/releases/download/')) {
+          throw new Error('Endereço de download inválido');
+        }
+        const version = String(release.tag_name || release.name || '').replace(/^v(?=\d)/, '');
+        const size = Number(asset.size);
+        const sizeText = Number.isFinite(size) && size > 0
+          ? ' · ' + (size / 1000000).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' MB' : '';
+        current = {
+          url: url.href,
+          name: asset.name,
+          at: Date.now(),
+          label: (version ? 'Versão ' + version + ' · ' : '') + 'Windows' + sizeText
+        };
+        download.href = url.href;
+        setNote(current.label);
+        return current;
+      } catch (error) {
+        current = null;
+        setNote('Não consegui buscar o instalador agora. Clique de novo para tentar outra vez.', true);
+        return null;
+      } finally {
+        clearTimeout(timeout);
+        download.removeAttribute('aria-busy');
+      }
+    })().finally(function () { pending = null; });
+    return pending;
+  }
+
+  // Dispara o download direto, sem sair da animação.
+  function startDownload(item) {
+    const link = document.createElement('a');
+    link.href = item.url;
+    link.download = item.name;
+    link.rel = 'noopener';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setNote('Download iniciado · confira a pasta Downloads.');
+    clearTimeout(restoreTimer);
+    restoreTimer = setTimeout(function () { setNote(item.label); }, 6000);
+  }
+
+  download.addEventListener('click', async function (event) {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    // Já tem o instalador consultado há pouco: baixa na hora e atualiza em segundo plano.
+    if (current && Date.now() - current.at < 10 * 60 * 1000) {
+      const item = current;
+      startDownload(item);
+      return;
+    }
+    const item = await refreshRelease();
+    if (item) startDownload(item);
+  });
+
+  refreshRelease();
+})();
+</script>
 </body>
 </html>
